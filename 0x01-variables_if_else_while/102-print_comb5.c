@@ -1,42 +1,50 @@
 #include <stdio.h>
-
+/* more headers goes there */
+/* betty style doc for function main goes there */
 /**
- * main - possible combos of 3 digits
+ * main - Entry point
  *
- * Return (0)
+ * Return: Always 0 (Success)
  */
-
 int main(void)
 {
-	int i, j, k;
+	int p = 48, q = 48, y = 48, x = 49;
 
-	for (i = 48; i < 58; i++)
+	while (p < 58)
 	{
-		for (j = 48; j < 58; j++)
+		while (q < 58)
 		{
-			for (k = 48; k < 58; k++)
+			while (y < 58)
 			{
-				if (i == j || j == k || i == k)
+				while (x < 58)
 				{
-					continue;
-				}
-				putchar(i);
-				putchar(j);
-				putchar(k);
-
-				if (i == 55 && j == 56 && k == 57)
-				{
-					break;
-
-				}
-				else
-				{
-					putchar(',');
+					putchar(p);
+					putchar(q);
 					putchar(' ');
+					putchar(y);
+					putchar(x);
+					if (!(p == 57 &&
+						q == 56 &&
+						y == 57 &&
+						x == 57))
+					{
+						putchar(',');
+						putchar(' ');
+					}
+					x++;
 				}
+				y++;
+				x = 48;
 			}
+			q++;
+			q = p;
+			x = q + 1;
 		}
-		putchar('\n');
-		return (0);
+		p++;
+		q = 48;
+		y = p;
+		x = q+ 1;
 	}
+	putchar('\n');
+	return (0);
 }
