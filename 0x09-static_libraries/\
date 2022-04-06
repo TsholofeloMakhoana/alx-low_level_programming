@@ -1,0 +1,13 @@
+#include "main.h"
+
+/**
+ * _abs - main
+ * @n: int
+ *
+ * Return: 0
+ */
+int _abs(int n)
+{
+printf("\n");
+return (0);
+}	
